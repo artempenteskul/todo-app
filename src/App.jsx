@@ -1,12 +1,10 @@
-import { useState } from 'react'
-
 import Header from './components/Header.jsx';
 import Todo from './components/Todo.jsx';
 
+import './App.css';
+
 
 export default function App() {
-  const [count, setCount] = useState(0)
-
   return (
       <div className="App">
           <Header />

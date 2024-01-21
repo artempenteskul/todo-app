@@ -1,0 +1,9 @@
+.itemContainer {
+    width: 500px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.item {
+    font-weight: bold;
+}

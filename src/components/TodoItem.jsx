@@ -1,5 +1,10 @@
+import styles from '../css/todoitem.module.css';
+
+
 export default function TodoItem({ item }) {
     return (
-        <h3 key={item}>{item}</h3>
+        <div className={styles.itemContainer}>
+            <div className={styles.item} key={item}>{item}</div>
+        </div>
     );
 }

@@ -15,12 +15,14 @@ export default function Todo() {
 
     return (
         <div>
+
             <form onSubmit={handleSubmit}>
                 <input onChange={e => setTodo(e.target.value)} value={todo} type="text"/>
                 <button type="submit">Add</button>
             </form>
 
-            {todos.map(item => <TodoItem item={item} />)}
+            {todos.map(item => <TodoItem key={item} item={item} />)}
+
         </div>
     );
 }

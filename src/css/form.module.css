@@ -14,18 +14,12 @@
 .todoFormInput {
     display: block;
     width: 70%;
-    border: none;
     color: #777777;
     font-size: 16px;
 }
 
-.todoFormInput:focus {
-    outline: none;
-}
-
 .todoFormBtn {
     display: inline-block;
-    border: none;
     border-radius: 5px;
     background-color: #c3deff;
     color: #ffffff;

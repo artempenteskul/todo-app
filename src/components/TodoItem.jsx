@@ -7,9 +7,23 @@ export default function TodoItem({ item, todos, setTodos }) {
         setTodos(todos.filter(todo => todo.id !== item.id));
     }
 
+    function handleChangeStatusClick(item) {
+        const newTodos = todos.map(todo => {
+            if (todo.id === item.id) {
+                return {...todo, isDone: !item.isDone}
+            } else {
+                return todo
+            }
+        })
+
+        setTodos(newTodos);
+    }
+
     return (
         <div className={styles.itemContainer}>
-            <div className={styles.item} key={item.id}>{item.name}</div>
+            <div className={item.isDone ? styles.itemDone : styles.item} key={item.id} onClick={() => handleChangeStatusClick(item)}>
+                <span>{item.name}</span>
+            </div>
             <button onClick={() => handleDeleteClick(item)} className={styles.deleteBtn}>X</button>
         </div>
     );

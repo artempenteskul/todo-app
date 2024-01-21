@@ -9,7 +9,15 @@
 }
 
 .item {
+    user-select: none;
+    cursor: pointer;
 
+}
+
+.itemDone {
+    user-select: none;
+    cursor: pointer;
+    text-decoration: line-through;
 }
 
 .deleteBtn {

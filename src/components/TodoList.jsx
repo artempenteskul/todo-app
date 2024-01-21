@@ -3,10 +3,10 @@ import TodoItem from './TodoItem.jsx';
 import styles from '../css/todolist.module.css';
 
 
-export default function TodoList({ todos }) {
+export default function TodoList({ todos, setTodos }) {
     return (
         <div className={styles.todosContainer}>
-            {todos.map(item => <TodoItem key={item} item={item} />)}
+            {todos.map(item => <TodoItem key={item} item={item} todos={todos} setTodos={setTodos} />)}
         </div>
     );
 }

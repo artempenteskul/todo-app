@@ -1,9 +1,25 @@
 .itemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 500px;
-    color: #000000;
+    color: #777777;
     font-size: 20px;
+    padding: 10px;
 }
 
 .item {
     font-weight: bold;
+}
+
+.deleteBtn {
+    border: none;
+    color: #ffffff;
+    background-color: #c3deff;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
 }

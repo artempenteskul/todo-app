@@ -3,6 +3,7 @@ import { v4 as uuidV4 } from 'uuid';
 
 import styles from '../css/form.module.css';
 
+
 const generateUUID = function () {
     return uuidV4();
 }
@@ -19,9 +20,7 @@ export default function Form({ todos, setTodos }) {
     }
 
     function handleSetTodo(e) {
-        setTodo(prevState => {
-            return {...prevState, name: e.target.value};
-        })
+        setTodo({id: todo.id, name: e.target.value, isDone: todo.isDone})
     }
 
     return (
